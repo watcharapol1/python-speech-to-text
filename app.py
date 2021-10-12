@@ -6,6 +6,7 @@ import codecs
 from itertools import chain
 import pandas as pd
 import json
+from flask import Flask,request,jsonify
 import numpy as np
 
 #############################################################################################
@@ -66,12 +67,23 @@ with mic as source:
  audio = recog.listen(source)
  word = recog.recognize_google(audio,language='th')
 
+# data =[]
 # with mic as source:
 #     while True:
 #         audio = recog.listen(source)
 #         try:
+#             data.append(recog.recognize_google(audio,language='th'))
 #             print(recog.recognize_google(audio,language='th'))
 #         except:
 #             continue
+
+# def sentiment_analyst(data_test):
+#     test = []
+#     for i in data_test:
+#         test.append(sentiment(i))
+#     df = pd.DataFrame(test, columns = ['text','sentiment'])
+#     result = df.to_json(orient="records")
+#     parsed = json.loads(result)
+#     return parsed
 
 sentiment(word)
