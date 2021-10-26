@@ -15,8 +15,6 @@ six==1.15.0
 SQLAlchemy==1.3.18
 Werkzeug==1.0.1
 pandas
-tweepy
+speech_recognition
 gunicorn
-pythainlp
-numpy  
-nltk pythainlp
+PyAudio-0.2.11-cp39-cp39-win_amd64.whl
